@@ -5183,7 +5183,7 @@ Original idea from: http://stackoverflow.com/questions/22758950/google-map-drawi
           typeOptions = scope.typeOptions || scope.clusterOptions;
           if (scope.doCluster || scope.type === 'cluster') {
             if (typeEvents != null) {
-              this.bindToTypeEvents(typeEvents);
+              this.bindToTypeEvents(typeEvents, ['spiderfy', 'unspiderfy']);
             }
             this.gManager = new ClustererMarkerManager(this.map, void 0, typeOptions, typeEvents);
           } else if (scope.type === 'spider') {
