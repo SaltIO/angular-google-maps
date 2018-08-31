@@ -10327,7 +10327,7 @@ MarkerLabel_.prototype.onRemove = function () {
   if (this.eventDiv_.parentNode) {
     this.eventDiv_.parentNode.removeChild(this.eventDiv_);
   }
-  if (this.listeners_) {
+  if (this.listeners_ && this.listeners_.length) {
     // Remove event listeners:
     for (i = 0; i < this.listeners_.length; i++) {
       google.maps.event.removeListener(this.listeners_[i]);
