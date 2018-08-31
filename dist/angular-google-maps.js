@@ -10327,10 +10327,11 @@ MarkerLabel_.prototype.onRemove = function () {
   if (this.eventDiv_.parentNode) {
     this.eventDiv_.parentNode.removeChild(this.eventDiv_);
   }
-
-  // Remove event listeners:
-  for (i = 0; i < this.listeners_.length; i++) {
-    google.maps.event.removeListener(this.listeners_[i]);
+  if (this.listeners_) {
+    // Remove event listeners:
+    for (i = 0; i < this.listeners_.length; i++) {
+      google.maps.event.removeListener(this.listeners_[i]);
+    }
   }
 };
 
